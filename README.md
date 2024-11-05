@@ -3,12 +3,12 @@
 
 ![Test Status](https://github.com/mHemaAP/EPAiV5-Session17/actions/workflows/python-app.yml/badge.svg)
 
-This assignmnet work includes two key Python modules: `student_code.py` and `student_merge.py`. These modules provide utility functions to validate dictionary structures and merge word frequency dictionaries, respectively. Each module addresses specific requirements related to data integrity, recursive handling of nested structures, and merging strategies with performance optimizations. Additionally, `student_merge.py` includes a sorting feature as a bonus.
+This assignmnet work includes two key Python modules: `student_code.py` and `student_merge.py`. These modules provide utility functions to validate dictionary structures and merge word frequency dictionaries, respectively. Each module addresses specific requirements related to data integrity, recursive handling of nested structures, and merging strategies with performance optimizations. Additionally, `student_merge.py` includes a **sorting feature as a bonus**.
 
 ## student_code.py
 This module contains a `validate` function that ensures a given dictionary (`data`) matches a specified structure (`template`). The `validate` function verifies the presence of required keys, the correct data types, and the integrity of nested structures, making it especially useful for scenarios requiring strict schema validation.
 
-###Overview of `validate` Function
+### Overview of `validate` Function
 The `validate` function recursively checks whether `data` conforms to the `template`. It inspects each key and verifies that:
 
 1. All required keys in the `template` are present in `data`.
@@ -140,7 +140,7 @@ def merge_with_counter(*dicts):
 ```
 
 #### Sorting Feature for Bonus Points
-Both functions include a sorting feature as a bonus requirement. After merging, the resulting dictionary is sorted by word frequency in descending order. This feature is helpful for use cases where the most common words need to be prioritized or quickly accessible.
+Both functions include a **sorting feature as a bonus requirement**. After merging, the resulting dictionary is sorted by word frequency in descending order. This feature is helpful for use cases where the most common words need to be prioritized or quickly accessible.
 
 ##### Example Usage of `merge_with_defaultdict` and `merge_with_counter`
 
