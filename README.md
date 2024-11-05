@@ -27,17 +27,17 @@ The `validate` function recursively checks whether `data` conforms to the `templ
 A tuple `(state, error)`, where `state` is a boolean indicating validation success, and error is an empty string if validation passed or a descriptive error message if it failed.
 
 #### Key Features and Requirements Met
-1. Value Types
+##### 1. Value Types
 - **Single Values and Nested Dictionaries:** The function supports both single-value types (e.g., strings, integers) and nested dictionaries, allowing recursive checks for deep structures.
-2. Exclusion of Lists
+##### 2. Exclusion of Lists
 - **No Lists:** Lists are not supported as values in this validation function, aligning with the requirement that lists should not be included as valid data types.
-3. Mandatory Keys and No Extra Keys
+##### 3. Mandatory Keys and No Extra Keys
 - **Required Keys:** The function ensures that all keys defined in `template` are present in `data`, and reports an error if any are missing.
 - **No Extra Keys:** If `data` contains keys not present in `template`, the function returns an error with the path of the extra key, enforcing strict compliance.
-4. Structure and Type Validation Only
+##### 4. Structure and Type Validation Only
 - **Type Validation:** The function uses `isinstance()` to verify that each value in data matches the type specified in `template`, focusing only on structural integrity, not specific values.
 - **Structural Validation:** The function ensures that `data` adheres to the hierarchical key structure defined in `template`.
-5. Error Handling and Early Termination
+##### 5. Error Handling and Early Termination
 - **Early Termination:** Validation stops at the first encountered error, making it efficient and ensuring immediate feedback on the nature of the discrepancy.
 - **Clear Error Messages:** Each error message includes the path to the location of the error, helping users identify exactly where the issue lies within the nested structure.
 
@@ -82,12 +82,12 @@ The module includes two functions:
 Both functions include a sorting option that orders the merged dictionary by word frequency in descending order, which is implemented to meet bonus requirements.
 
 ### Key Requirements Addressed
-1. Handling Arbitrary Numbers of Dictionaries
+#### 1. Handling Arbitrary Numbers of Dictionaries
 - **Variable Arguments:** Both functions accept a variable number of dictionary arguments (`*dicts`). This flexibility enables the user to merge any number of word frequency dictionaries.
-2. Edge Case Handling
+#### 2. Edge Case Handling
 - **Empty Inputs:** If no dictionaries are provided, the functions return an empty dictionary without errors.
 - **Negative Counts:** The functions assume that frequencies are non-negative integers, as per typical use cases. If negative values are provided, they are included in the count sum, but negative word frequencies may indicate an error in the input data.
-3. No Side Effects
+#### 3. No Side Effects
 - **Immutable Original Dictionaries:** Both functions create new dictionaries and do not modify the original dictionaries, preserving input data integrity.
 
 ### Detailed Function Descriptions
